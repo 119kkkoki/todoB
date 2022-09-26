@@ -19,6 +19,7 @@ class CreateTasksTable extends Migration
             $table->string('contents');//タスクの詳細が入る
             $table->text('image_at');
             $table->integer('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
 
             $table->timestamps();//タスクの登録日・変更日
         });

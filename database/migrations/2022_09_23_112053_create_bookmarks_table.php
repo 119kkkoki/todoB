@@ -17,6 +17,8 @@ class CreateBookmarksTable extends Migration
             $table->increments('id');
             $table->integer('task_id');
             $table->integer('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('post_id')->references('id')->on('posts');
 
             $table->timestamps();
         });
