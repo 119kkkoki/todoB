@@ -15,10 +15,10 @@ class CreateBookmarksTable extends Migration
     {
         Schema::create('bookmarks', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('task_id');
-            $table->integer('user_id');
+            $table->unsignedBigInteger('task_id')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('post_id')->references('id')->on('posts');
+            $table->foreign('task_id')->references('id')->on('tasks');
 
             $table->timestamps();
         });
