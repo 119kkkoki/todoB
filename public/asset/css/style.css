@@ -4,18 +4,76 @@
 }
 
 header{
-    background-color:rgb(158, 98, 98);
+    background-color:rgb(237, 204, 204);
     height: 50px;
+    margin-bottom: 60px;
+}
+.header-inner{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(25%);
 }
 
+h2{
+    font-size: 20px;
+}
 .navbar{ 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content:center;
+    
 }
 
 .navbar > li{ 
     margin-right: 20px;
     list-style: none;
+}
+.navbar > li > a{ 
+  text-decoration: none;
+  color: blue;
+}
+.body{ 
+    padding: 0 25px;
+}
+.content{ 
+    width: 30%;
+}
+
+h3{
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding: 5px;
+    border: 1px solid black ;
+}
+.content-description > p{
+  margin-bottom: 30px;
+}
+.delete-btn{ 
+    padding: 5px 5px;
+    background-color: red;
+    border: red;
+    color: white;
+}
+.content-image{
+    width: 300px;
+    height: 200px;
+    background-color:cadetblue;
+    margin-bottom: 20px;
+}
+.crad-btn{
+    display: flex;
+    justify-content: left;
+}
+.edit-btn{ 
+    display: inline-block;
+    background-color: blue;
+    padding:0 5px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    align-items: center;
 }

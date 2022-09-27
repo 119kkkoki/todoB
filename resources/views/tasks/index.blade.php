@@ -10,14 +10,18 @@
 
 <body>
   <header>
-    <nav>
-        <ul class="navbar">
-            <li><a href="">Create</a></li>
-            <li><a href="">Username</a></li>
-        </ul>
-    </nav>
+    <div class="header-inner">
+      <h2>やることアプリ</h2>
+      <nav>
+          <ul class="navbar">
+              <li><a href="">Create</a></li>
+              <li><a href="">Logout</a></li>
+              <li>Username</li>
+          </ul>
+      </nav>
+  </div>
   </header>
-
+  <div class="body">
   <div class="content">
 
       <div class="content-image">
@@ -25,21 +29,18 @@
       </div>
 
       <div class="content-description">
-        <h2>タイトル</h2>
-        <p>中野は元気ですが何か？</p>
-        
+        <h3>中野の本日</h3>
+        <p>中野は元気ですが何か？君もきっと元気なのでしょう。もし、そうでなければ飴をあげます。</p>
       </div>
 
-     
-        <svg class="bi" width="32" height="32" fill="currentColor">
-          <use xlink:href="bootstrap-icons.svg#heart-fill"/>
-        </svg>
-   
-      <a href="#">EDIT</a>
+      <div class="crad-btn">
+      <a href="#" class="edit-btn">EDIT</a>
       <form action="#" method="post">
-        <input type="submit" value="DELETE" onclick='return confirm("本当に削除しますか？");'>
+        <input class="delete-btn" type="submit" value="DELETE" onclick='return confirm("本当に削除しますか？");'>
       </form>
-      
+    </div>
+
   </div>
+</div>
 </body>
 </html> 
