@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Task;
 
 use Illuminate\Http\Request;
 
@@ -8,6 +9,9 @@ class TaskController extends Controller
 {
     public function index()
     { 
-        return view('tasks.index');
+        $tasks = Task::all();      
+        //dd($tasks);
+
+        return view('tasks.index', ['tasks' =>$tasks]);
     }
 }

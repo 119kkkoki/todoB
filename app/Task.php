@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Task extends Model
 {
     //
+
+    protected $fillable =[
+        'user_id', 'contents',
+    ];
+
     public function Bookmarks()
     {
         return $this->hasMany('App\Bookmark');

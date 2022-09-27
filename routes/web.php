@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-//Postモデルを使う宣言
-use App\Post;
+//Taskモデルを使う宣言
+use App\Task;
 // use Auth;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,3 +26,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/index', 'TaskController@index')->name('tasks.index');
+
+Route::get('/index/create', 'TaskController@create')->name('tasks.create');
+
