@@ -14,7 +14,7 @@
       <h2>やることアプリ</h2>
       <nav>
           <ul class="navbar">
-              <li><a href="">Create</a></li>
+              <li><a href="{{ route('tasks.create') }}">Create</a></li>
               <li><a href="">Logout</a></li>
               <li>Username</li>
           </ul>
@@ -34,7 +34,7 @@
       <div class="card-data">
         投稿日時:{{ $task -> created_at }}
       </div>
-      @endforeach
+      
 
       <div class="crad-btn">
       <a href="#" class="edit-btn">EDIT</a>
@@ -42,6 +42,7 @@
         <input class="delete-btn" type="submit" value="DELETE" onclick='return confirm("本当に削除しますか？");'>
       </form>
       </div>
+      @endforeach
 
 
   </div>
