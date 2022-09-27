@@ -35,13 +35,11 @@
           <use xlink:href="bootstrap-icons.svg#heart-fill"/>
         </svg>
    
-      <a href="{{route('tasks.edit',$task->id)}}">EDIT</a>
-
-      <form action="{{route('tasks.destroy',$task->id)}}" method="post">
-        @csrf
-        @method('delete')
+      <a href="#">EDIT</a>
+      <form action="#" method="post">
         <input type="submit" value="DELETE" onclick='return confirm("本当に削除しますか？");'>
       </form>
+      
   </div>
 </body>
 </html> 

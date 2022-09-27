@@ -26,9 +26,3 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/index', 'TaskController@index')->name('tasks.index');
-
-Route::post('/index','TaskController@store')->name('tasks.store');
-
-Route::get('/index/{id}/edit', 'TaskController@edit')->name('tasks.edit');
-
-Route::delete('/index/{id}', 'TaskController@destroy')->name('tasks.destroy');
