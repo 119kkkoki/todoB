@@ -11,9 +11,16 @@ class TaskController extends Controller
     public function index()
     { 
         $tasks = Task::all();      
-        //dd($tasks);
+        // dd($tasks);
 
         return view('tasks.index', ['tasks' =>$tasks]);
+    }
+
+    public function show($id)
+    { 
+        $tasks = Task::find($id);      
+
+        return view('task.show', ['task' =>$task]);
     }
 
     public function create()
@@ -34,6 +41,27 @@ class TaskController extends Controller
         return redirect()->route('tasks.index');
     }
 
+    function edit($id)
+    {
+        $task = Task::find($id);
+        return view('tasks.edit',['task'=>$task]);
+    }
 
+    function update(Request $request, $id)
+    {
+        $task = Task::find($id);
+        $task -> title = $request -> title;
+        $task -> contents = $request -> contents;
+        $task -> save();
+        return redirect()->route('tasks.index');
+    }
+    function destroy($id)
+    {
+        $task = Task::find($id);
+        $task -> delete();
+        return redirect()->route('tasks.index');
+    }
 }
+
+
 
