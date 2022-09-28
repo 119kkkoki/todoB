@@ -3,52 +3,24 @@
     margin:0;
 }
 
-header{
-    background-color:rgb(237, 204, 204);
-    height: 50px;
-    margin-bottom: 60px;
-}
-.header-inner{ 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transform: translateY(25%);
-}
-
-h2{
-    font-size: 20px;
-}
-.navbar{ 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:center;
-    
-}
-
-.navbar > li{ 
-    margin-right: 20px;
-    list-style: none;
-}
-.navbar > li > a{ 
-  text-decoration: none;
-  color: blue;
-}
-.body{ 
+body{ 
     padding: 0 25px;
 }
-.content{ 
+.card{ 
     width: 30%;
+    margin: 40px;
+    border: solid 3px black;
+    border-radius: 5%;
 }
 
 h3{
     display: inline-block;
     font-size: 16px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     padding: 5px;
     border: 1px solid black ;
 }
-.content-description > p{
+.card-contents > p{
   margin-bottom: 30px;
 }
 .delete-btn{ 
@@ -57,9 +29,9 @@ h3{
     border: red;
     color: white;
 }
-.content-image{
-    width: 300px;
-    height: 200px;
+.card-image{
+    width: 160px;
+    height: 90px;
     background-color:cadetblue;
     margin-bottom: 20px;
 }
