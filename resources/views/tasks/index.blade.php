@@ -15,7 +15,7 @@
       <h3 class="card-title">タイトル:{{ $task -> title}}</h3>
       <p class="card-contents">内容:{{ $task -> contents }}</p>
     </div>
-    {{-- <img src="{{ asset($task->image_at) }}" class="card-image" alt="...">--}}
+    <img src="{{ asset($task->image_at) }}" class="card-image" alt="...">
     <div class="card-data"> 
       投稿日時:{{ $task -> created_at }}
     </div>
@@ -27,7 +27,6 @@
         <input class="delete-btn" type="submit" value="DELETE" onclick='return confirm("本当に削除しますか？");'>
       </form>
     </div>
-
   </div>
   @endforeach
 </body>
