@@ -15,13 +15,15 @@
       <h3 class="card-title">タイトル:{{ $task -> title}}</h3>
       <p class="card-contents">内容:{{ $task -> contents }}</p>
     </div>
-    <img src="{{ asset($task->image_at) }}" class="card-image" alt="...">
-    <div class="card-data">
+    {{-- <img src="{{ asset($task->image_at) }}" class="card-image" alt="...">--}}
+    <div class="card-data"> 
       投稿日時:{{ $task -> created_at }}
     </div>
     <div class="card-btn">
-      <a href="#" class="edit-btn">EDIT</a>
-      <form action="#" method="post">
+      <a href="{{ route('tasks.edit', $task->id) }}" class="edit-btn">EDIT</a>
+      <form action="{{ route('tasks.destroy', $task->id)  }}" method="post">
+        @csrf
+        @method('delete')
         <input class="delete-btn" type="submit" value="DELETE" onclick='return confirm("本当に削除しますか？");'>
       </form>
     </div>
