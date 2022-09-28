@@ -1,5 +1,3 @@
-{{-- 編集ファイル:とうま作成予定
- --}}
 <div class="container">
     <div class="row justify-content-center"></div>
     <div class="col-md-8">

@@ -1,3 +1,7 @@
+@extends('layouts.app_original')
+@section('content')
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,10 +28,13 @@
       <form action="{{ route('tasks.destroy', $task->id)  }}" method="post">
         @csrf
         @method('delete')
+        
         <input class="delete-btn" type="submit" value="DELETE" onclick='return confirm("本当に削除しますか？");'>
       </form>
     </div>
   </div>
+@endsection
   @endforeach
 </body>
 </html> 
+
