@@ -14,7 +14,7 @@
       <h2>やることアプリ</h2>
       <nav>
           <ul class="navbar">
-              <li><a href="">Create</a></li>
+              <li><a href="{{ route('tasks.create') }}">Create</a></li>
               <li><a href="">Logout</a></li>
               <li>Username</li>
           </ul>
@@ -23,22 +23,27 @@
   </header>
   <div class="body">
   <div class="content">
-
-      <div class="content-image">
-        <img src="写真" >
-      </div>
-
+      @foreach($tasks as $task)
       <div class="content-description">
-        <h3>中野の本日</h3>
-        <p>中野は元気ですが何か？君もきっと元気なのでしょう。もし、そうでなければ飴をあげます。</p>
+        <h3 class="card-body">中野の:{{ $task -> title}}</h3>
+        <p class="card-text">中野は{{ $task -> contents }}</p>
       </div>
+      <div class="card-image">
+         <img src="{{ $task -> image_at }}" >{{--よくわからん --}}
+      </div>
+      <div class="card-data">
+        投稿日時:{{ $task -> created_at }}
+      </div>
+      
 
       <div class="crad-btn">
       <a href="#" class="edit-btn">EDIT</a>
       <form action="#" method="post">
         <input class="delete-btn" type="submit" value="DELETE" onclick='return confirm("本当に削除しますか？");'>
       </form>
-    </div>
+      </div>
+      @endforeach
+
 
   </div>
 </div>
