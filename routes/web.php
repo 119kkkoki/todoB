@@ -29,4 +29,3 @@ Route::get('/index', 'TaskController@index')->name('tasks.index');
 
 Route::get('/index/create', 'TaskController@create')->name('tasks.create');
 Route::post('/index', 'TaskController@store')->name('tasks.store');
-
