@@ -12,6 +12,16 @@
 </head>
 
 <body>
+
+  <div class="create">
+    <h1>今日は何をする？</h1>
+
+    <div class="btn">
+      <a href="{{ route('tasks.create') }}" class="create-btn">create</a>
+    </div>
+  </div>
+  
+
   @foreach($tasks as $task)
   <div class="card">
     <div class="card-body">

@@ -6,6 +6,28 @@
 body{ 
     padding: 0 25px;
 }
+
+.create{
+    display: block;
+    text-align: center;
+    justify-content: center;
+
+    margin: 20px;
+}
+
+.create-btn{
+    display: inline-block;
+    background-color: blue;
+    padding: 5px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10%;
+} 
+
 .card{ 
     width: 30%;
     margin: 40px;
@@ -42,10 +64,12 @@ h3{
 .edit-btn{ 
     display: inline-block;
     background-color: blue;
-    padding:0 5px;
+    padding: 5px;
     margin-right: 20px;
     text-decoration: none;
     color: white;
     font-size: 14px;
     align-items: center;
+    border: 1px solid black;
+    border-radius: 10%;
 }
