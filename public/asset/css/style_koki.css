@@ -17,15 +17,16 @@ body{
 
 .create-btn{
     display: inline-block;
-    background-color: blue;
+    background-color:#fb8b0b;
     padding: 5px;
     margin-right: 20px;
     text-decoration: none;
     color: white;
-    font-size: 14px;
+    font-size: 29px;
     align-items: center;
-    border: 1px solid black;
+    border: .1px solid #fb8b0b;
     border-radius: 10%;
+    
 } 
 
 .card{ 
@@ -33,6 +34,10 @@ body{
     margin: 40px;
     border: solid 3px black;
     border-radius: 5%;
+
+    display: flex;
+    flex: auto;
+    
 }
 
 h3{
@@ -50,6 +55,7 @@ h3{
     background-color: red;
     border: red;
     color: white;
+    
 }
 .card-image{
     width: 160px;
