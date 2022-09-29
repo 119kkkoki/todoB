@@ -14,14 +14,14 @@
 <body>
 
   <div class="create">
-    <h1>今日は何をする？</h1>
+    {{-- <h1 class="index-title">今日は何をするの？</h1> --}}
 
     <div class="btn">
-      <a href="{{ route('tasks.create') }}" class="create-btn">create</a>
+      <a href="{{ route('tasks.create') }}" class="create-btn">♡何やるの？を追加♡</a>
     </div>
   </div>
-  
-<div class="nakano">
+
+{{-- <div class="wrapper">
   @foreach($tasks as $task)
   <div class="card">
     <div class="card-body">
@@ -41,6 +41,31 @@
       </form>
     </div>
   </div>
+  @endforeach
+</div> --}}
+
+<div class="wrapper">
+  @foreach($tasks as $task)
+  <div class="card">
+    <div class="card-title">
+      <h3 class="card-title">何やる？:{{ $task -> title}}</h3>
+    </div>
+    <div class="card-detail">
+    <p class="card-contents">内容:{{ $task -> contents }}</p>
+    <img src="{{ asset($task->image_at) }}" class="card-image" alt="...">
+    <div class="card-data"> 
+      投稿日時:{{ $task -> created_at }}
+    </div>
+    <div class="card-btn">
+      <a href="{{ route('tasks.edit', $task->id) }}" class="edit-btn">EDIT</a>
+      <form action="{{ route('tasks.destroy', $task->id)  }}" method="post">
+        @csrf
+        @method('delete')
+        <input class="delete-btn" type="submit" value="DELETE" onclick='return confirm("本当に削除しますか？");'>
+      </form>
+    </div>
+  </div>
+</div>
   @endforeach
 </div>
 
