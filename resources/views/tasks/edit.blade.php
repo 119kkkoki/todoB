@@ -8,6 +8,7 @@
             @method('put')
             <div class="form-group">
                 <label>タイトル</label>
+                <link rel="stylesheet" href="{{asset('/asset/css/edit.css') }}">
                 <input type="text" class="form-control" value="{{ $task->title }}" name="title">
             </div>
             <div class="form-group">
