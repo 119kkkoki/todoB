@@ -26,8 +26,12 @@
     <div class="card-title">
       <h3 class="card-title">何やる？:{{ $task -> title}}</h3>
     </div>
+
+    <img src="{{ asset('storage/' . $task->image_at) }}" class="card-image" alt="...">
+    
     <div class="card-detail">
     <p class="card-contents">内容:{{ $task -> contents }}</p>
+    
     <div class="card-data"> 
       DATE:{{ $task -> created_at }}
     </div>

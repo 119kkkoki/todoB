@@ -11,7 +11,7 @@ class TaskController extends Controller
     public function index()
     { 
         $tasks = Task::all();      
-        // dd($tasks);
+        //dd($tasks);
 
         return view('tasks.index', ['tasks' =>$tasks]);
     }
@@ -33,9 +33,11 @@ class TaskController extends Controller
         $task = new Task;
         $task -> title = $request -> title;
         $task -> contents = $request -> contents;
-        $task -> image_at = $request -> image_at;
-        $task -> user_id = Auth::id();
 
+        $image_at = $request->file('image_at') -> store('public');
+        $task -> image_at =str_replace('public/','',$image_at);
+
+        $task -> user_id = Auth::id();
         $task -> save();
 
         return redirect()->route('tasks.index');
