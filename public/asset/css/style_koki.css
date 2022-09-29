@@ -18,12 +18,12 @@
 
 .create-btn{
     display: inline-block;
-    background-color: #f4b0af ;
+    background-color: #eea907 ;
     padding: 5px;
     margin-right: 20px;
     text-decoration: none;
     color: white;
-    font-size: 14px;
+    font-size: 40px;
     align-items: center;
     /* border: 1px solid black; */
     border-radius: 10%;    
@@ -67,7 +67,11 @@ h3{
     width: 160px;
     height: 90px;
     background-color:cadetblue;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.card-data{
+    margin-bottom: 10px;
 }
 .card-btn{
     display: flex;

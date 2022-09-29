@@ -16,7 +16,7 @@
   <div class="create">
     {{-- <h1 class="index-title">今日は何をするの？</h1> --}}
     <div class="btn">
-      <a href="{{ route('tasks.create') }}" class="create-btn">♡何やるの？を追加♡</a>
+      <a href="{{ route('tasks.create') }}" class="create-btn">>>♡何やるの？を追加♡</a>
     </div>
   </div>
 
