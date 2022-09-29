@@ -3,52 +3,63 @@
     margin:0;
 }
 
-body{ 
+/* body{ 
     padding: 0 25px;
+} */
+.index-title{ 
+    font-size: 30px;
 }
-
-
 .create{
     display: block;
     text-align: center;
     justify-content: center;
-
     margin: 20px;
 }
 
 .create-btn{
     display: inline-block;
-    background-color: blue;
+    background-color: #f4b0af ;
     padding: 5px;
     margin-right: 20px;
     text-decoration: none;
     color: white;
     font-size: 14px;
     align-items: center;
-    border: 1px solid black;
-    border-radius: 10%;
-} 
-
+    /* border: 1px solid black; */
+    border-radius: 10%;    
+}
+.wrapper{ 
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 .card{ 
     width: 30%;
+    background-color:white;
     margin: 40px;
-    border: solid 3px black;
-    border-radius: 5%;
+    /* border: solid 3px black; */
+    /* border-radius: 5%;  */
 }
 
 h3{
-    display: inline-block;
-    font-size: 16px;
-    margin-bottom: 5px;
-    padding: 5px;
-    border: 1px solid black ;
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+    padding: 10px ;
+    background-color: bisque;
+
 }
 .card-contents > p{
   margin-bottom: 30px;
 }
+
+.card-detail{
+    padding: 10px;
+}
+
 .delete-btn{ 
     padding: 5px 5px;
-    background-color: red;
+    background-color:rgb(188, 85, 85);
     border: red;
     color: white;
 }
@@ -64,7 +75,7 @@ h3{
 }
 .edit-btn{ 
     display: inline-block;
-    background-color: blue;
+    background-color: rgb(76, 76, 152);
     padding: 5px;
     margin-right: 20px;
     text-decoration: none;

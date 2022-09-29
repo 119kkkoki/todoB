@@ -21,7 +21,7 @@
 
       <!-- Styles -->
     <link href="{{ asset('/asset/css/headfoot.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('/asset/css/style.css') }}">
+    {{-- <link rel="stylesheet" href="{{asset('/asset/css/style.css') }}"> --}}
 </head>
 
 <body>
