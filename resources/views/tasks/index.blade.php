@@ -14,23 +14,26 @@
 <body>
 
   <div class="create">
-    <h1>今日は何をする？</h1>
-
+    {{-- <h1 class="index-title">今日は何をするの？</h1> --}}
     <div class="btn">
-      <a href="{{ route('tasks.create') }}" class="create-btn">create</a>
+      <a href="{{ route('tasks.create') }}" class="create-btn">♡何やるの？を追加♡</a>
     </div>
   </div>
-  
-<div class="nakano">
+
+<div class="wrapper">
   @foreach($tasks as $task)
   <div class="card">
-    <div class="card-body">
-      <h3 class="card-title">タイトル:{{ $task -> title}}</h3>
-      <p class="card-contents">内容:{{ $task -> contents }}</p>
+    <div class="card-title">
+      <h3 class="card-title">何やる？:{{ $task -> title}}</h3>
     </div>
+
     <img src="{{ asset('storage/' . $task->image_at) }}" class="card-image" alt="...">
+    
+    <div class="card-detail">
+    <p class="card-contents">内容:{{ $task -> contents }}</p>
+    
     <div class="card-data"> 
-      投稿日時:{{ $task -> created_at }}
+      DATE:{{ $task -> created_at }}
     </div>
     <div class="card-btn">
       <a href="{{ route('tasks.edit', $task->id) }}" class="edit-btn">EDIT</a>
@@ -41,6 +44,7 @@
       </form>
     </div>
   </div>
+</div>
   @endforeach
 </div>
 
