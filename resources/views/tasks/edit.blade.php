@@ -1,3 +1,5 @@
+@extends('layouts.app_original')
+@section('content')
 <div class="container">
     <div class="row justify-content-center"></div>
     <div class="col-md-8">
@@ -16,3 +18,4 @@
         </form>
     </div>
 </div>
+@endsection

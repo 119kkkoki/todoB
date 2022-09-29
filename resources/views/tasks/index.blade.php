@@ -21,7 +21,7 @@
     </div>
   </div>
   
-
+<div class="nakano">
   @foreach($tasks as $task)
   <div class="card">
     <div class="card-body">
@@ -42,6 +42,7 @@
     </div>
   </div>
   @endforeach
+</div>
 
 @endsection
 </body>
