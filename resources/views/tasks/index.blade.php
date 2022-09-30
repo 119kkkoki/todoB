@@ -14,7 +14,7 @@
 
 <body>
   <div>
-    <form action="{{ route('tasks.index') }}" method="GET">
+    <form action="{{ route('tasks.index') }}" method="GET" class="search">
       <input type="text" name="keyword" value="{{ $keyword }}">
       <input type="submit" value="検索">
     </form>
@@ -23,7 +23,7 @@
   <div class="create">
     {{-- <h1 class="index-title">今日は何をするの？</h1> --}}
     <div class="btn">
-      <a href="{{ route('tasks.create') }}" class="create-btn">>>♡何やるの？を追加♡</a>
+      <a href="{{ route('tasks.create') }}" class="create-btn">TODOを追加</a>
     </div>
   </div>
   
@@ -50,9 +50,7 @@
         @method('delete')
         <input class="delete-btn" type="submit" value="DELETE" onclick='return confirm("本当に削除しますか？");'>
       </form>
-    </div>
-  </div>
-  <div style="padding: 10px 40px" class="heart">
+      <div style="padding: 10px 40px" class="heart">
     @if($task->BookmarkBy(Auth::user())->count() > 0)
     <a  href="/bookmarks/{{  $task ->BookmarkBy(Auth::user())->firstOrFail()->id}}">♥ </a>
     @else
@@ -60,6 +58,9 @@
     @endif
     {{ $task->bookmarks->count() }}
   </div>
+    </div>
+  </div>
+  
   
   
 </div>
