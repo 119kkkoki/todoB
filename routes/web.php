@@ -33,3 +33,7 @@ Route::get('/index/{id}/edit','TaskController@edit')->name('tasks.edit');
 Route::put('/index/{id}','TaskController@update')->name('tasks.update');
 Route::get('/index/{id}','TaskController@show')->name('tasks.show');
 Route::delete('/index/{id}','TaskController@destroy')->name('tasks.destroy');
+
+
+Route::get('/tasks/{task_id}/bookmarks', 'BookmarkController@store');
+Route::get('/bookmarks/{bookmark_id}', 'BookmarkController@destroy');
