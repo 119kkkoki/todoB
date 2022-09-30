@@ -45,7 +45,7 @@
       </form>
     </div>
   </div>
-  <div style="padding: 10px 40px">
+  <div style="padding: 10px 40px" class="heart">
     @if($task->BookmarkBy(Auth::user())->count() > 0)
     <a  href="/bookmarks/{{  $task ->BookmarkBy(Auth::user())->firstOrFail()->id}}">♥ </a>
     @else
