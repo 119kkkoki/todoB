@@ -12,6 +12,12 @@
 </head>
 
 <body>
+  <div>
+    <form action="{{ route('tasks.index') }}" method="GET">
+      <input type="text" name="keyword" value="{{ $keyword }}">
+      <input type="submit" value="検索">
+    </form>
+  </div>
 
   <div class="create">
     {{-- <h1 class="index-title">今日は何をするの？</h1> --}}
@@ -19,6 +25,7 @@
       <a href="{{ route('tasks.create') }}" class="create-btn">>>♡何やるの？を追加♡</a>
     </div>
   </div>
+  
 
 <div class="wrapper">
   @foreach($tasks as $task)
@@ -47,6 +54,7 @@
 </div>
   @endforeach
 </div>
+
 
 @endsection
 </body>

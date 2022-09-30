@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 use App\Task;
 use Illuminate\Support\Facades\Auth;
-
 use Illuminate\Http\Request;
+
 
 class TaskController extends Controller
 {
@@ -62,6 +62,21 @@ class TaskController extends Controller
         $task = Task::find($id);
         $task -> delete();
         return redirect()->route('tasks.index');
+    }
+    
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');
+
+        $query = Task::query();
+
+        if(!empty($keyword)) {
+            $query->where('title', 'LIKE', "%{$keyword}%")
+                ->orWhere('contents', 'LIKE', "%{$keyword}%");
+        }
+
+        $tasks = $query->get();
+        return view('tasks.index', compact('tasks', 'keyword'));
     }
 }
 
