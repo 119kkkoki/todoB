@@ -47,9 +47,9 @@
   </div>
   <div style="padding: 10px 40px">
     @if($task->BookmarkBy(Auth::user())->count() > 0)
-    <a  href="/bookmarks/{{  $task ->BookmarkBy(Auth::user())->firstOrFail()->id}}">取り消し<i class="fa-solid fa-bookmark-slash"></i></a>
+    <a  href="/bookmarks/{{  $task ->BookmarkBy(Auth::user())->firstOrFail()->id}}">♥ </a>
     @else
-    <a  href="/tasks/{{  $task -> id }}/bookmarks">ブックマーク<i class="fa-regular fa-bookmark"></i></a>
+    <a  href="/tasks/{{  $task -> id }}/bookmarks">♡</i></a>
     @endif
     {{ $task->bookmarks->count() }}
   </div>
