@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>To do リスト</title>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('/asset/css/style_koki.css') }}">
 </head>
 
@@ -51,6 +52,16 @@
       </form>
     </div>
   </div>
+  <div style="padding: 10px 40px" class="heart">
+    @if($task->BookmarkBy(Auth::user())->count() > 0)
+    <a  href="/bookmarks/{{  $task ->BookmarkBy(Auth::user())->firstOrFail()->id}}">♥ </a>
+    @else
+    <a  href="/tasks/{{  $task -> id }}/bookmarks">♡</i></a>
+    @endif
+    {{ $task->bookmarks->count() }}
+  </div>
+  
+  
 </div>
   @endforeach
 </div>
